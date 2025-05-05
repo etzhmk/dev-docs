@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A minimal and responsive documentation layout with a fixed sidebar, clean content area, and easy customization. Ideal for devs looking for simple, organized documentation."
+    />
+    <meta name="author" content="etzhmk" />
+    <meta
+      name="keywords"
+      content="documentation, dev docs, tech docs, minimalistic docs, responsive docs"
+    />
+    <title>Your Project Name - Documentation</title>
+    <script
+      src="https://kit.fontawesome.com/0b31c8773c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="./assets/images/icons/favicon.png" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- If you are using SCSS, please compile it into CSS before linking -->
+    <!-- <link rel="stylesheet" href="./SCSS/styles.SCSS" /> -->
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Strukt CSS</header>
+      <ul>
+        <h4>Introduction</h4>
+        <li>
+          <a class="nav-link" href="#what_you_should_already_know"
+            >What you should already know
+          </a>
+        </li>
+        <li><a class="nav-link" href="#getting_started">Getting Started</a></li>
+        <hr />
+        <h4>Guide</h4>
+        <li><a class="nav-link" href="#core_principles">Core Principles</a></li>
+        <li><a class="nav-link" href="#components">Components </a></li>
+        <li><a class="nav-link" href="#utilities">Utilities</a></li>
+        <li><a class="nav-link" href="#customization">Customization </a></li>
+      </ul>
+      <hr />
+
+      <div class="socials">
+        <i class="fa-brands fa-github-alt"></i>
+        <i class="fa-brands fa-discord"></i>
+        <i class="fa-brands fa-bluesky"></i>
+        <i class="fa-brands fa-reddit-alien"></i>
+
+        <div class="future-button"></div>
+      </div>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="what_you_should_already_know">
+        <header>What You Should Already Know</header>
+        <p>
+          <strong>Strukt CSS</strong> is a lightweight CSS framework inspired by
+          neobrutalism and neo-minimalism. It was created as a free and
+          open-source tool for developers, designers, and anyone who values
+          clarity, structure, and style.
+        </p>
+        <p>
+          Before getting started, keep in mind that Strukt CSS is designed to be
+          simple, lightweight, and visually distinctive.
+        </p>
+        <p>Here’s an example of what you can build with it:</p>
+        <img
+          class="intro-example"
+          src="./assets/images/intro-example.png"
+          alt="Example of Strukt CSS styling"
+        />
+        <p>Yep, this doc uses Strukt CSS too.</p>
+      </section>
+
+      <section class="main-section" id="getting_started">
+        <header>Getting Started</header>
+        <p>To begin using Strukt CSS, follow these simple steps:</p>
+        <ol>
+          <li>
+            <strong>Install Strukt CSS</strong> - Download the latest version
+            from our <a href="lin-to-repository">repository</a> or use a CDN link.
+          </li>
+          <li>
+            <strong>Include the CSS file</strong> - Link the Strukt CSS file in
+            your HTML document:
+          </li>
+        </ol>
+        <pre><code>&lt;link rel="stylesheet" href="path/to/strukt.css"&gt;</code></pre>
+        <ol start="3">
+          <li>
+            <strong>Start styling</strong> - Apply Strukt's predefined classes
+            to your HTML elements for an immediate effect!
+          </li>
+        </ol>
+        <p>
+          For more details, refer to our
+          <a href="#variables">variables</a> section to customize the framework
+          to your needs.
+        </p>
+      </section>
+
+      <section class="main-section" id="core_principles">
+        <header>Core Principles</header>
+        <p>
+          Strukt CSS is built on the following core principles to ensure it
+          remains lightweight, efficient, and easy to use:
+        </p>
+        <ul>
+          <li>
+            <strong>Simplicity</strong> – The framework is designed to be as
+            simple as possible, with minimal code and intuitive class names. You
+            can quickly implement it without needing to understand complex
+            configurations.
+          </li>
+          <li>
+            <strong>Modularity</strong> – Strukt CSS offers a modular structure,
+            so you only need to use the parts of the framework that you need,
+            keeping your project lean and optimized.
+          </li>
+          <li>
+            <strong>Responsiveness</strong> – The framework is built with
+            mobile-first design principles, ensuring that your websites look
+            great on any device, from mobile to desktop.
+          </li>
+          <li>
+            <strong>Consistency</strong> – Strukt CSS ensures a consistent
+            design language across your project, with predefined spacing,
+            typography, and color guidelines to streamline the design process.
+          </li>
+          <li>
+            <strong>Flexibility</strong> – While Strukt CSS provides basic
+            styles, it’s also highly customizable to suit the unique needs of
+            your project. You can override variables and classes to fine-tune
+            the look and feel.
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="components">
+        <header>Components</header>
+        <p>
+          Coming soon! This section will cover the built-in components of Strukt
+          CSS, such as buttons, cards, and forms, that you can easily integrate
+          into your projects.
+        </p>
+      </section>
+
+      <section class="main-section" id="variables">
+        <header>Variables</header>
+        <p>
+          Coming soon! In this section, we will explain how to customize Strukt
+          CSS using its predefined variables for colors, fonts, spacing, and
+          more.
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const navLinks = document.querySelectorAll("#navbar a");
+
+      function updateActiveLink() {
+        const hash = location.hash;
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === hash) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      }
+
+      window.addEventListener("hashchange", updateActiveLink);
+      window.addEventListener("DOMContentLoaded", updateActiveLink);
+    </script>
+  </body>
+</html>
