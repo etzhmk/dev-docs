@@ -30,16 +30,18 @@
     <button class="burger" aria-label="Toggle menu">☰</button>
     <nav id="navbar">
       <header>Strukt CSS</header>
+      <h4>Introduction</h4>
       <ul>
-        <h4>Introduction</h4>
         <li>
           <a class="nav-link" href="#what_you_should_already_know"
             >What you should already know
           </a>
         </li>
         <li><a class="nav-link" href="#getting_started">Getting Started</a></li>
-        <hr />
-        <h4>Guide</h4>
+      </ul>
+      <hr />
+      <h4>Guide</h4>
+      <ul>
         <li><a class="nav-link" href="#core_principles">Core Principles</a></li>
         <li><a class="nav-link" href="#components">Components </a></li>
         <li><a class="nav-link" href="#utilities">Utilities</a></li>
@@ -52,8 +54,6 @@
         <i class="fa-brands fa-discord"></i>
         <i class="fa-brands fa-bluesky"></i>
         <i class="fa-brands fa-reddit-alien"></i>
-
-        <div class="future-button"></div>
       </div>
     </nav>
 
@@ -164,15 +164,15 @@
     </main>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const burger = document.querySelector(".burger");
-          const navbar = document.querySelector("#navbar");
-      
-          burger.addEventListener("click", () => {
-            navbar.classList.toggle("open");
-          });
+      document.addEventListener("DOMContentLoaded", function () {
+        const burger = document.querySelector(".burger");
+        const navbar = document.querySelector("#navbar");
+
+        burger.addEventListener("click", () => {
+          navbar.classList.toggle("open");
         });
-      </script>
+      });
+    </script>
     <script>
       const navLinks = document.querySelectorAll("#navbar a");
 
