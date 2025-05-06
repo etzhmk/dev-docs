@@ -27,6 +27,7 @@
     <!-- <link rel="stylesheet" href="./SCSS/styles.SCSS" /> -->
   </head>
   <body>
+    <button class="burger" aria-label="Toggle menu">☰</button>
     <nav id="navbar">
       <header>Strukt CSS</header>
       <ul>
@@ -47,7 +48,7 @@
       <hr />
 
       <div class="socials">
-        <i class="fa-brands fa-github-alt"></i>
+        <i class="fa-brands fa-github"></i>
         <i class="fa-brands fa-discord"></i>
         <i class="fa-brands fa-bluesky"></i>
         <i class="fa-brands fa-reddit-alien"></i>
@@ -84,7 +85,8 @@
         <ol>
           <li>
             <strong>Install Strukt CSS</strong> - Download the latest version
-            from our <a href="lin-to-repository">repository</a> or use a CDN link.
+            from our <a href="lin-to-repository">repository</a> or use a CDN
+            link.
           </li>
           <li>
             <strong>Include the CSS file</strong> - Link the Strukt CSS file in
@@ -161,6 +163,16 @@
       </section>
     </main>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const burger = document.querySelector(".burger");
+          const navbar = document.querySelector("#navbar");
+      
+          burger.addEventListener("click", () => {
+            navbar.classList.toggle("open");
+          });
+        });
+      </script>
     <script>
       const navLinks = document.querySelectorAll("#navbar a");
 
